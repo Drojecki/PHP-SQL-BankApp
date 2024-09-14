@@ -5,11 +5,9 @@ error_reporting(E_ALL);
 
 require_once "./Scripts/Connect.php";
 
-// Zmień na swój klucz tajny reCAPTCHA
-$recaptchaSecretKey = '6LeBVmEpAAAAAJWHAOmFRqNl3JvjK-8dt1xhYrqx';
+$recaptchaSecretKey = 'recaptchaSecretKey';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sprawdzenie reCAPTCHA
     $recaptchaResponse = $_POST['g-recaptcha-response'];
 
     $recaptchaUrl = "https://www.google.com/recaptcha/api/siteverify";
